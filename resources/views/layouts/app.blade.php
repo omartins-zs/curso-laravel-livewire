@@ -8,12 +8,11 @@
     <title>Curso Laravel Livewire</title>
 
     @livewireStyles
-
 </head>
 
 <body>
     <div class="container">
-        {{ slot }}
+        {{ $slot }}
     </div>
 
     @livewireScripts
