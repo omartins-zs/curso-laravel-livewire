@@ -1,11 +1,11 @@
 <div>
     <h1>Show Tweets</h1>
 
-    <p>{{ $message }}</p>
+    <p>{{ $content }}</p>
 
     <form method="post" wire:submit.prevent='create'>
 
-        <input type="text" name="message" id="message" wire:model.live='message'>
+        <input type="text" name="content" id="content" wire:model.live='content'>
 
         <button type="submit">Criar Tweet</button>
     </form>
