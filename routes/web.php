@@ -13,7 +13,7 @@ Route::get('/counter', function () {
     return view('counter-page');
 });
 
-Route::get('/tweets', ShowTweets::class);
+Route::get('/tweets', ShowTweets::class)->middleware('auth');
 
 Route::middleware([
     'auth:sanctum',
