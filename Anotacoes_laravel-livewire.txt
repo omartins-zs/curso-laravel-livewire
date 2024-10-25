@@ -1,0 +1,64 @@
+composer global require laravel/installer
+
+
+laravel new laravel-livewire
+
+
+cd laravel-livewire
+
+ 
+npm install
+
+
+composer run dev
+
+
+composer require livewire/livewire
+
+
+php artisan
+
+
+php artisan livewire:publish --config
+
+
+php artisan livewire:publish --assets
+
+
+php artisan make:model Tweet -m
+
+
+php artisan migrate
+
+
+php artisan make:seed UserSeed
+
+
+php artisan db:seed
+
+
+composer require laravel/jetstream
+
+
+php artisan jetstream:install livewire
+
+
+php artisan make:model Like -m
+
+
+php artisan migrate
+
+
+php artisan migrate:fresh
+
+
+php artisan storage:link
+
+
+--------------------------------------------------------
+
+Comandos apos a instalação(Comando composer run dev)
+
+➜ cd laravel-livewire
+➜ npm install && npm run build
+➜ Open: http://laravel-livewire.test
