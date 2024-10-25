@@ -15,7 +15,7 @@ class ShowTweets extends Component
 
     public function render()
     {
-        $tweets = Tweet::with('user')->get();
+        $tweets = Tweet::with('user')->paginate(2);
 
         return view('livewire.show-tweets', compact('tweets'));
 
