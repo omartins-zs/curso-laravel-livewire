@@ -19,7 +19,7 @@
         @if ($tweet->likes->count())
             <a href="http://">Descurtir</a>
         @else
-            <a href="http://">Curtir</a>
+            <a href="#" wire:click.prevent="like({{ $tweet->id }})">Curtir</a>
         @endif
         <br>
     @endforeach
