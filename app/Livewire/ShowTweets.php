@@ -4,9 +4,12 @@ namespace App\Livewire;
 
 use App\Models\Tweet;
 use Livewire\Component;
+use Livewire\WithPagination;
 
 class ShowTweets extends Component
 {
+    use WithPagination;
+
     public $content = "Apenas um teste";
 
     protected $rules = [
