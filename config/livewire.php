@@ -38,7 +38,10 @@ return [
     |
     */
 
-    'layout' => 'components.layouts.app',
+    // Mudando o Layout Padrão do Livewire
+    'layout' => 'layouts.app',
+
+    // 'layout' => 'components.layouts.app',
 
     /*
     |---------------------------------------------------------------------------
