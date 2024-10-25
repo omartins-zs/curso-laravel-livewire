@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Livewire\Counter;
+use App\Livewire\Counter;
 use App\Livewire\ShowTweets;
 
 Route::get('/', function () {
@@ -14,3 +14,13 @@ Route::get('/counter', function () {
 });
 
 Route::get('/tweets', ShowTweets::class);
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
