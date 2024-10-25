@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Counter;
+use App\Livewire\ShowTweets;
 
 Route::get('/', function () {
     return view('welcome');
@@ -11,3 +12,5 @@ Route::get('/', function () {
 Route::get('/counter', function () {
     return view('counter-page');
 });
+
+Route::get('/tweets', ShowTweets::class);
