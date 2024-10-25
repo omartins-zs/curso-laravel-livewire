@@ -22,4 +22,15 @@ class ShowTweets extends Component
         // Se não mudar o Layout padrão do Livewire usar a linha abaixo
         // return view('livewire.show-tweets')->layout('layouts.app'); // Use a referência correta
     }
+
+    public function create()
+    {
+        // dd($this->message);
+        Tweet::create([
+            'content' => $this->message,
+            'user_id' => 1,
+        ]);
+
+        $this->message = '';
+    }
 }
