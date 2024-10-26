@@ -3,9 +3,12 @@
 namespace App\Livewire\User;
 
 use Livewire\Component;
+use Livewire\WithFileUploads;
 
 class UploadPhoto extends Component
 {
+    use WithFileUploads;
+
     public $photo;
 
     public function render()
@@ -15,6 +18,10 @@ class UploadPhoto extends Component
 
     public function storagePhoto()
     {
-        dd("CXheugue");
+        $this->validate([
+            'photo' =>'required|image|max:1024'
+        ]);
+        
+        dd($this->photo);
     }
 }
