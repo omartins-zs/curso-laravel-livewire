@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Counter;
 use App\Livewire\ShowTweets;
+use App\Livewire\User\UploadPhoto;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,7 +14,9 @@ Route::get('/counter', function () {
     return view('counter-page');
 });
 
-Route::get('/tweets', ShowTweets::class)->middleware('auth');
+Route::get('/tweets', ShowTweets::class)->name('tweets.index')->middleware('auth');
+
+Route::get('/upload', UploadPhoto::class)->name('upload.photo.user');
 
 Route::middleware([
     'auth:sanctum',
