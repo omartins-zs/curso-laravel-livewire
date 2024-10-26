@@ -4,6 +4,9 @@
     <form action="" method="post" wire:submit.prevent='storagePhoto'>
 
         <input type="file" wire:model="photo">
+        @error('photo')
+            {{ $message }}
+        @enderror
 
         <button type="submit">Upload foto</button>
     </form>
