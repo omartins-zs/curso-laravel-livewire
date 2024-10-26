@@ -16,7 +16,7 @@ Route::get('/counter', function () {
 
 Route::get('/tweets', ShowTweets::class)->name('tweets.index')->middleware('auth');
 
-Route::get('/upload', UploadPhoto::class)->name('upload.photo.user');
+Route::get('/upload', UploadPhoto::class)->name('upload.photo.user')->middleware('auth');
 
 Route::middleware([
     'auth:sanctum',
