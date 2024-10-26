@@ -1,9 +1,9 @@
 <div>
 
     <h1>Atualizar foto de perfil</h1>
-    <form action="" method="post">
+    <form action="" method="post" wire:submit.prevent='storagePhoto'>
 
-        <input type="file" name="photo" id="photo">
+        <input type="file" wire:model="photo">
 
         <button type="submit">Upload foto</button>
     </form>
