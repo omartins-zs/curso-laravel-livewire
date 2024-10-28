@@ -17,10 +17,9 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="font-sans antialiased bg-gray-100">
         <x-banner />
-
-        <div class="min-h-screen bg-gray-100">
+        <div class="container mx-auto h-200">
             {{-- @livewire('navigation-menu') --}}
 
             <!-- Page Heading -->
