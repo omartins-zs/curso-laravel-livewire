@@ -62,6 +62,7 @@ npm i
 
 npm run dev
 https://laravel.com/
+https://herd.laravel.com/windows
 https://tailwindcss.com/
 https://livewire.laravel.com/
 https://jetstream.laravel.com/introduction.html
