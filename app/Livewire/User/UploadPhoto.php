@@ -23,19 +23,23 @@ class UploadPhoto extends Component
             'photo' => 'required|image|max:1024'
         ]);
 
-        // dd();
+        // dd($this->photo);
 
         $user = auth()->user();
 
         $nameFile = Str::slug($user->name) . '.' . $this->photo->getClientOriginalExtension();
 
         // $this->photo->store('users');
-        if ($path = $this->photo->storeAs('users', $nameFile)) {
-            $user->update(
-                [
-                    'profile_photo_path' => $path,
-                ]
-            );
+        if ($path = $this->photo->storeAs('users', $nameFile, 'public')) {
+
+            // dd('File Path: ', $path);
+
+            $user->update([
+                'profile_photo_path' => $path,
+            ]);
+
+            // dd('User Updated: ', $userUpdated);
+
         }
 
         return redirect()->route('tweets.index');
