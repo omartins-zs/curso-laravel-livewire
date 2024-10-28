@@ -6,7 +6,7 @@ laravel new laravel-livewire
 
 cd laravel-livewire
 
- 
+
 npm install
 
 
@@ -53,6 +53,14 @@ php artisan migrate:fresh
 
 
 php artisan storage:link
+
+ls -l public/storage
+
+php artisan livewire:make User/UploadPhoto
+
+npm i
+
+npm run dev
 
 
 --------------------------------------------------------
